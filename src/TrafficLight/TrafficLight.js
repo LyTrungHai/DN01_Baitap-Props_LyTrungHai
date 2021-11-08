@@ -11,6 +11,9 @@ export default class TrafficLight extends Component {
     this.state = {
       currentColor: RED,
     };
+  }
+
+  componentWillUnmount() {
     setInterval(() => {
       this.setState({
         currentColor: this.getNextColor(this.state.currentColor),
